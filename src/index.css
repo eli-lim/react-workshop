@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* I like the dark theme */
+  background-color: #282c34;
+  color: #ffffff;
 }
 
 code {
