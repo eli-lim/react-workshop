@@ -44,7 +44,7 @@ TODO
 2. create-react-app: https://reactjs.org/docs/create-a-new-react-app.html#create-react-app
 3. Visit localhost:3000 (if it doesn’t automatically appear)
 4. Make sure you see the following page:
-   
+   ![cra start page](public/cra-start-page.jpeg)
 5. Open up your favourite ide (e.g. vscode or intellij, not notepad++) and import (open) the project
 6. Try changing the "Edit src/App.js and save to reload." text to "Hello world!" and see the automagical reload
 7. 🚀
