@@ -19,7 +19,7 @@ const TodoListWithFetchedData = ({ limit = 3 }) => {
       {
         todos
           .slice(0, limit)
-          .map(todo => <Todo todo={todo} />)
+          .map(todo => <Todo todo={todo} key={todo.id} />)
       }
     </Container>
   )

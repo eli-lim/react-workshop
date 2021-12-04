@@ -25,7 +25,7 @@ const TodoListWithStaticData = () => {
   return (
     <Container>
       {
-        todos.map(todo => <Todo todo={todo} />)
+        todos.map(todo => <Todo todo={todo} key={todo.id} />)
       }
     </Container>
   )
