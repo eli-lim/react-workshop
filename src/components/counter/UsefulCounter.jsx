@@ -1,17 +1,30 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import Button from './Button'
+import Button from '../Button'
 
-const Counter = () => {
+/**
+ * This counter is actually useful since it's not just for display purposes -
+ * we can actually use its state (the count value) in other components
+ */
+const UsefulCounter = ({
+  value = 0,
+  onChange = () => {},
+}) => {
   // Data
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(value)
+
+  function handleCountChange(newCount) {
+    setCount(newCount)
+    onChange(newCount) // Propagate state up to parent component
+  }
+
   return (
     <Container>
-      <Button onClick={() => setCount(count - 1)}>
+      <Button onClick={() => handleCountChange(count - 1)}>
         -
       </Button>
       <div>{ count }</div>
-      <Button onClick={() => setCount(count + 1)}>
+      <Button onClick={() => handleCountChange(count + 1)}>
         +
       </Button>
     </Container>
@@ -41,4 +54,4 @@ const Container = styled.div`
   }
 `
 
-export default Counter
+export default UsefulCounter
